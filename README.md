@@ -119,7 +119,7 @@ streamlit run app.py
 
 ### Home Page
 
-(Add Screenshot Here)
+![Home Page](screenshots/homepage.png)
 
 ### Resume & Cover Letter Generation
 
