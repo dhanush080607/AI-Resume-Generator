@@ -1,4 +1,4 @@
-__pycache__/
-*.pdf
 secret.py
 .env
+__pycache__/
+*.pyc

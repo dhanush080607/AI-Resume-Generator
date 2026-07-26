@@ -1,67 +1,67 @@
-# 🤖 AI Resume Studio
+# ⚡ AI Resume Studio
 
-### Generate ATS-Optimized Resumes, Cover Letters & Career Insights with AI
+An AI-powered Resume and Cover Letter Generator built with **Python, Streamlit, and Google Gemini AI**.
 
----
+AI Resume Studio helps users create professional, ATS-friendly resume summaries and cover letters from their personal information. It also provides an optional ATS compatibility analysis by comparing the candidate's profile with a target job description.
 
-## 🚀 Overview
-
-AI Resume Studio is a modern AI-powered career assistant built using **Python, Streamlit, and Google Gemini AI**.
-
-The application helps users create professional ATS-friendly resume summaries, generate personalized cover letters, analyze job descriptions, and receive ATS compatibility scores instantly.
-
-Designed with a futuristic animated interface, the platform simplifies the job application process and helps candidates improve their chances of passing Applicant Tracking Systems (ATS).
+🌐 **Live Demo:** https://ai-resume-generator-project.streamlit.app/
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-### 📄 AI Resume Generator
+### 📄 AI Resume Summary Generation
 
-Generate professional and ATS-friendly resume summaries based on your skills, education, and experience.
+Generate a concise and professional resume summary using your:
 
-### 💌 AI Cover Letter Generator
+* Name
+* Skills
+* Education
+* Work experience
 
-Create personalized cover letters tailored to your profile and target job role.
+### ✉️ AI Cover Letter Generation
 
-### 🎯 ATS Score Analysis
+Automatically generate a professional, ready-to-use cover letter based on the candidate information provided.
 
-Analyze your profile against a job description and receive an ATS compatibility score.
+### 🎯 ATS Compatibility Analysis
 
-### 📊 Career Insights
+Paste a target job description to receive an AI-powered analysis containing:
 
-Discover:
-
+* ATS Compatibility Score
 * Missing Skills
-* Key Strengths
+* Candidate Strengths
 * Improvement Suggestions
-* ATS Optimization Tips
 
-### 📥 PDF Export
+### 📥 PDF Resume Export
 
-Download generated resumes and cover letters as PDF documents.
+Download your generated resume and cover letter as a PDF document.
 
-### 🎨 Modern UI/UX
+### 📊 ATS Report Download
 
-Includes:
+Download your ATS analysis as a `.txt` file for future reference.
 
-* Animated Gradient Background
-* Glassmorphism Design
-* Responsive Layout
-* Interactive Metrics
-* Celebration Effects
+### 🎨 Modern Cyberpunk UI
+
+The application features a modern glassmorphism and cyberpunk-inspired interface with:
+
+* Animated loading screen
+* Gradient UI elements
+* Glass-style cards
+* Responsive Streamlit layout
+* Dark futuristic design
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-| Technology       | Purpose                   |
-| ---------------- | ------------------------- |
-| Python           | Backend Logic             |
-| Streamlit        | Web Application Framework |
-| Google Gemini AI | Content Generation        |
-| ReportLab        | PDF Generation            |
-| Regex            | ATS Score Extraction      |
+| Technology          | Purpose                                |
+| ------------------- | -------------------------------------- |
+| Python              | Application development                |
+| Streamlit           | Web application framework              |
+| Google Gemini AI    | Resume, cover letter, and ATS analysis |
+| ReportLab           | PDF document generation                |
+| Regular Expressions | ATS score extraction                   |
+| HTML & CSS          | Custom user interface                  |
 
 ---
 
@@ -72,79 +72,159 @@ AI-Resume-Generator/
 │
 ├── app.py
 ├── pdf_generator.py
-├── secret.py
 ├── requirements.txt
-├── README.md
-│
-└── screenshots/
+├── .gitignore
+└── README.md
 ```
+
+### File Description
+
+* `app.py` — Main Streamlit application and AI generation logic
+* `pdf_generator.py` — Generates downloadable PDF documents
+* `requirements.txt` — Contains required Python dependencies
+* `.gitignore` — Prevents sensitive and unnecessary files from being uploaded
+* `README.md` — Project documentation
 
 ---
 
 ## ⚙️ Installation
 
-### Clone Repository
+### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/YOUR_USERNAME/AI-Resume-Generator.git
+```
+
+### 2. Navigate to the Project
+
+```bash
 cd AI-Resume-Generator
 ```
 
-### Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Application
+---
+
+## 🔑 API Configuration
+
+This project uses the **Google Gemini API**.
+
+For local development, configure your Gemini API key using your preferred secure method.
+
+For Streamlit Community Cloud deployment, add your API key to Streamlit Secrets:
+
+```toml
+GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
+```
+
+⚠️ **Never commit your API key to GitHub.**
+
+Make sure sensitive files such as `secret.py` and `.streamlit/secrets.toml` are included in `.gitignore`.
+
+---
+
+## ▶️ Run Locally
+
+Start the Streamlit application with:
 
 ```bash
 streamlit run app.py
 ```
 
----
-
-## 🖥 Application Workflow
-
-1. Enter Candidate Details
-2. Generate Resume Summary
-3. Generate Cover Letter
-4. Analyze ATS Compatibility
-5. View ATS Score
-6. Download PDF Report
+The application will open in your browser.
 
 ---
 
-## 📸 Screenshots
+## 🧑‍💻 How to Use
 
-### Home Page
-
-![Home Page](screenshots/homepage.png)
-
-### Resume & Cover Letter Generation
-
-![Resume Generator](screenshots/coverletter_pdf.png)
-
-### ATS Analysis Dashboard
-
-![ATS Score](screenshots/ats_score.png)
-
----
-
-## 🔮 Future Enhancements
-
-* Multiple Resume Templates
-* Resume Keyword Optimizer
-* LinkedIn Profile Analyzer
-* Interview Question Generator
-* One-Click Resume Builder
-* Cloud Storage Integration
+1. Open the AI Resume Studio application.
+2. Enter your full name.
+3. Add your skills and technical stack.
+4. Enter your education and credentials.
+5. Add your work experience and highlights.
+6. Optionally paste a target job description.
+7. Click **Initialize Generation Process**.
+8. Wait for Gemini AI to generate your resume summary and cover letter.
+9. Download your generated PDF.
+10. If a job description was provided, review your ATS compatibility report.
+11. Download the ATS report if required.
 
 ---
 
-## 🎓 Internship Project
+## 🎯 ATS Analysis
 
-Developed as part of the **SystemTron Generative AI Internship Program**.
+When a job description is provided, the application analyzes the candidate profile against the target role.
+
+The ATS analysis provides:
+
+```text
+ATS SCORE
+
+MISSING SKILLS
+
+STRENGTHS
+
+IMPROVEMENT SUGGESTIONS
+```
+
+The ATS score is extracted from the AI-generated response and displayed as a percentage inside the application.
+
+---
+
+## ☁️ Deployment
+
+The application is deployed using **Streamlit Community Cloud**.
+
+🌐 **Live Application:**
+
+https://ai-resume-generator-project.streamlit.app/
+
+To deploy your own version:
+
+1. Push the project to GitHub.
+2. Open Streamlit Community Cloud.
+3. Connect your GitHub repository.
+4. Select `app.py` as the main file.
+5. Add `GEMINI_API_KEY` under Streamlit Secrets.
+6. Deploy the application.
+
+---
+
+## 🔐 Security
+
+The Gemini API key is a private credential.
+
+Do not:
+
+* Commit API keys to GitHub
+* Share API keys publicly
+* Add API keys directly to `app.py`
+* Upload `secret.py` if it contains your API key
+
+Use environment variables or Streamlit Secrets to manage sensitive credentials.
+
+---
+
+## 🔮 Future Improvements
+
+Planned improvements may include:
+
+* Full AI-generated resume sections
+* Multiple professional resume templates
+* Custom resume themes
+* Job-specific resume optimization
+* LinkedIn profile optimization
+* Resume keyword recommendations
+* Resume scoring improvements
+* DOCX export
+* Resume history and saved profiles
+* User authentication
+* Database integration
+* Improved ATS keyword matching
 
 ---
 
@@ -152,6 +232,24 @@ Developed as part of the **SystemTron Generative AI Internship Program**.
 
 **Dhanush**
 
-Passionate about AI, Machine Learning, Data Science, and Full-Stack Development.
+Computer Science & Engineering — Data Science
 
-⭐ If you like this project, consider giving it a star on GitHub!
+Interested in:
+
+* Artificial Intelligence
+* Machine Learning
+* Data Science
+* Full-Stack Development
+* AI-Powered Applications
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+---
+
+## 📜 License
+
+This project is created for educational and portfolio purposes.
