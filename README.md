@@ -119,15 +119,15 @@ streamlit run app.py
 
 ### Home Page
 
-(Add Screenshot Here)
+![Home Page](screenshots/homepage.png)
 
 ### Resume & Cover Letter Generation
 
-(Add Screenshot Here)
+![Resume Generator](screenshots/coverletter_pdf.png)
 
 ### ATS Analysis Dashboard
 
-(Add Screenshot Here)
+![ATS Score](screenshots/ats_score.png)
 
 ---
 
