@@ -338,7 +338,10 @@ if st.button("🚀 INITIALIZE GENERATION PROCESS"):
             Experience: {experience}
             """
 
-            response = model.generate_content(prompt)
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt
+            )
             
             # Save into Session State to avoid wipe on button click
             st.session_state["generated_text"] = response.text
