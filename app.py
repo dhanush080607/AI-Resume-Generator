@@ -390,7 +390,10 @@ if st.button("🚀 INITIALIZE GENERATION PROCESS"):
                 {job_description}
                 """
 
-                ats_response = model.generate_content(ats_prompt)
+                ats_response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=ats_prompt
+                )
                 st.session_state["ats_analysis_text"] = ats_response.text
 
                 score_match = re.search(r"ATS SCORE[: ]+(\d+)", st.session_state["ats_analysis_text"], re.IGNORECASE)
