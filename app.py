@@ -1,12 +1,13 @@
 import streamlit as st
 import re
-import google.generativeai as genai
-from secret import API_KEY
+from google import genai
 from pdf_generator import create_pdf
 
+# Get Gemini API Key from Streamlit Secrets
+API_KEY = st.secrets["API_KEY"]
+
 # Configure Gemini
-genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-2.5-flash")
+client = genai.Client(api_key=API_KEY)
 
 # Page Config
 st.set_page_config(
